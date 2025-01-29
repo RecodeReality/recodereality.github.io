@@ -9,3 +9,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.main-image {
+	pointer-events: none;
+}
