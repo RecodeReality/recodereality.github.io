@@ -12,4 +12,5 @@ body {
 
 .main-image {
 	pointer-events: none;
+	max-width: 800px;
 }
