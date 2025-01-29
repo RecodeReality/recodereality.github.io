@@ -1,5 +1,7 @@
 body {
 	overflow-y: scroll;
+	background-color: #000;
+	color: #FFF;
 }
 
 .center {
