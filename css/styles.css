@@ -112,11 +112,19 @@ body {
 		width: 450px;
 		color: #864ae7;
 	}
+
+	.octagon {
+		background: #747474;
+	}
 }
 
 @media (max-width: 400px) {
 	.main-image, .center {
 		width: 370px;
 		color: #f747d0;
+	}
+
+	.octagon {
+		background: #747474;
 	}
 }
