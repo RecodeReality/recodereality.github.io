@@ -12,25 +12,25 @@
 
 <body onresize="showSize()">
 	<div class="center">
-		<img class="main-image" src="./img/RR_Header_Graphic.png" />
+		<img id="headerImage" class="main-image" src="./img/RR_Header_Graphic.png" />
 		<!--<p id="debug">debug text</p>-->
 
-		<div class="menu-container">
-			<div class="octagon oct-one">
+		<div id="menu" class="menu-container">
+			<div id="about" class="octagon oct-one" onclick="slide()">
 				<p class="oct-text">ABOUT</p>
 			</div>
-			<div class="octagon oct-two">
+			<div id="library" class="octagon oct-two" onclick="slide()">
 				<p class="oct-text">LIBRARY</p>
 			</div>
-			<div class="octagon oct-three">
-				<p class="oct-text" style="margin-top:30px">DISCORD</p>
+			<div id="discord" class="octagon oct-three">
+				<p class="oct-text">DISCORD</p>
 			</div>
-			<div class="octagon oct-four">
-				<p class="oct-text" style="margin-top:30px">CONTACT</p>
+			<div id="contact" class="octagon oct-four" onclick="slide()">
+				<p class="oct-text">CONTACT</p>
 			</div>
 		</div>
 	</div>
-
+	
 	<script type="text/javascript" src="./js/indexscript.js"></script>
 </body>
   
