@@ -43,11 +43,12 @@ body {
 	  	50% calc(100% - var(--o))
 	);
 	background: #222222;
-	transition: .5s;
+	transition: 1.5s;
 }
 
 .octagon:hover {
 	background: #747474;
+	transition: 0.5s;
 }
 
 .oct-one {
