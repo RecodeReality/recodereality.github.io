@@ -9,13 +9,15 @@ body {
 .center {
 	position: absolute;
 	left: 50%;
-	height: 50%;
-	transform: translate(-50%, 50%);
+	transform: translateX(-50%);
 }
 
 .main-image {
+	height: 50%;
 	pointer-events: none;
 	user-select: none;
+	transform: translateY(50%);
+	transition: 0.5s;
 }
 
 #debug {
@@ -24,10 +26,12 @@ body {
 
 .menu-container {
 	margin-left: 50%;
+	margin-top: 100px;
 	translate: -50%;
 	scale: 1;
 	width: 200px;
 	height: 200px;
+	transition: 0.5s;
 	/*border: 2px solid red;*/
 }
 
@@ -43,7 +47,7 @@ body {
 	  	50% calc(100% - var(--o))
 	);
 	background: #222222;
-	transition: 1.5s;
+	transition: 0.5s;
 }
 
 .octagon:hover {
@@ -77,6 +81,44 @@ body {
 	font-size: 14px;
 	margin-top: 29px;
 	color: #000;
+}
+
+.openAbout {
+	clip-path: polygon(0 0, 100% 0, 100% 27%, 0 27%);
+	margin-left: 10px;
+}
+
+.openLibrary {
+	clip-path: polygon(0 0, 100% 0, 100% 27%, 0 27%);
+	margin-top: 0px;
+	margin-left: 190px;
+}
+
+.openDiscord {
+	clip-path: polygon(0 0, 100% 0, 100% 27%, 0 27%);
+	margin-top: 0px;
+	margin-left: -80px;
+}
+
+.openContact {
+	clip-path: polygon(0 0, 100% 0, 100% 27%, 0 27%);
+	margin-top: 0px;
+	margin-left: 100px;
+}
+
+.oct-text.titleText {
+	margin-top: 0px;
+	transition: 0.5s;
+}
+
+.main-image.pageOpen {
+	transform: translateY(0%);
+	transition: 0.5s;
+}
+
+.menu-container.menuSlide {
+	margin-top: -30px;
+	transition: 0.5s;
 }
 
 @media (max-width: 4000px) {
