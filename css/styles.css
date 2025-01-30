@@ -127,4 +127,8 @@ body {
 	.octagon {
 		background: #747474;
 	}
+
+	.menu-container {
+		scale: 0.7;
+	}
 }
