@@ -3,6 +3,7 @@ body {
 	overflow-x: hidden;
 	background-color: #000;
 	color: #FFF;
+	font-family: 'Arial Black';
 }
 
 .center {
@@ -19,6 +20,62 @@ body {
 
 #debug {
 	text-align: center;
+}
+
+.menu-container {
+	margin-left: 50%;
+	translate: -50%;
+	scale: 1;
+	width: 200px;
+	height: 200px;
+	/*border: 2px solid red;*/
+}
+
+.octagon {
+	position: absolute;
+	width: 80px;
+	aspect-ratio: 1;
+	--o:calc(50%*tan(-22.5deg));
+	clip-path: polygon(
+	  	var(--o) 50%,
+	  	50% var(--o),
+	  	calc(100% - var(--o)) 50%,
+	  	50% calc(100% - var(--o))
+	);
+	background: #222222;
+	transition: .5s;
+}
+
+.octagon:hover {
+	background: #747474;
+}
+
+.oct-one {
+	margin-left: 60px;
+}
+
+.oct-two {
+	margin-left: 120px;
+	margin-top: 60px;
+}
+
+.oct-three {
+	margin-left: 0px;
+	margin-top: 60px;
+}
+
+.oct-four {
+	margin-left: 60px;
+	margin-top: 120px;
+}
+
+.oct-text {
+	text-align: center;
+	pointer-events: none;
+	user-select: none;
+	font-size: 14px;
+	margin-top: 29px;
+	color: #000;
 }
 
 @media (max-width: 4000px) {
