@@ -21,42 +21,42 @@ body {
 
 @media (max-width: 4000px) {
 	.main-image, .center {
-		width: 900px;
+		width: 950px;
 		color: #ff3d3d;
 	}
 }
 
 @media (max-width: 1200px) {
 	.main-image, .center {
-		width: 800px;
+		width: 950px;
 		color: #f0bc2f;
 	}
 }
 
 @media (max-width: 1000px) {
 	.main-image, .center {
-		width: 650px;
+		width: 800px;
 		color: #4be43d;
 	}
 }
 
 @media (max-width: 800px) {
 	.main-image, .center {
-		width: 500px;
+		width: 650px;
 		color: #51cfe6;
 	}
 }
 
 @media (max-width: 600px) {
 	.main-image, .center {
-		width: 350px;
+		width: 450px;
 		color: #864ae7;
 	}
 }
 
 @media (max-width: 400px) {
 	.main-image, .center {
-		width: 350px;
+		width: 370px;
 		color: #f747d0;
 	}
 }
