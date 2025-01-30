@@ -1,16 +1,46 @@
 body {
 	overflow-y: scroll;
+	overflow-x: hidden;
 	background-color: #000;
 	color: #FFF;
 }
 
 .center {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .main-image {
 	pointer-events: none;
-	max-width: 800px;
+}
+
+@media (max-width: 1200px) {
+	.main-image, .center {
+		width: 800px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.main-image, .center {
+		width: 650px;
+	}
+}
+
+@media (max-width: 800px) {
+	.main-image, .center {
+		width: 500px;
+	}
+}
+
+@media (max-width: 600px) {
+	.main-image, .center {
+		width: 350px;
+	}
+}
+
+@media (max-width: 400px) {
+	.main-image, .center {
+		width: 200px;
+	}
 }
