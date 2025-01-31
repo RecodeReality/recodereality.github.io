@@ -6,13 +6,14 @@ Recode Reality Home Page Javascript
 // Components
 // -----
 
-const debugText = document.getElementById('debug');
+//const debugText = document.getElementById('debug');
 
 // -----
 // Variables
 // -----
 
 let menuSlide = false;
+let isAboutShown = false;
 
 // -----
 // Script
@@ -53,4 +54,29 @@ const slide = () => {
   }
 
   menuSlide = !menuSlide;
+}
+
+const showAbout = () => {
+  if (isAboutShown) {
+    // Reverse the animation
+    document.getElementById("aboutText").classList.remove("aboutDivText");
+    document.getElementById("aboutText").classList.add("reverseAboutText");
+    document.getElementById("aboutImg").classList.remove("aboutDivImage");
+    document.getElementById("aboutImg").classList.add("reverseAboutImage");
+    
+    // Set a timeout to hide the #aboutPage element after a short delay
+    setTimeout(() => {
+      document.getElementById("aboutPage").style.display = "none";
+      slide();
+    }, 2000); // Adjust the delay to match the animation duration
+  } else {
+    // Show the about page with animation
+    slide();
+    document.getElementById("aboutPage").style.display = "block";
+    document.getElementById("aboutText").classList.remove("reverseAboutText");
+    document.getElementById("aboutText").classList.add("aboutDivText");
+    document.getElementById("aboutImg").classList.remove("reverseAboutImage");
+    document.getElementById("aboutImg").classList.add("aboutDivImage");
+  }
+  isAboutShown = !isAboutShown;
 }
