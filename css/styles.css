@@ -260,6 +260,11 @@ body {
 	.main-image, .center {
 		width: 650px;
 	}
+
+	#aboutText {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
 }
 
 @media (max-width: 600px) {
@@ -269,6 +274,11 @@ body {
 
 	.octagon {
 		background: #747474;
+	}
+
+	#aboutText {
+		padding-left: 35px;
+		padding-right: 35px;
 	}
 }
 
@@ -283,5 +293,10 @@ body {
 
 	.menu-container {
 		scale: 0.7;
+	}
+
+	#aboutText {
+		padding-left: 25px;
+		padding-right: 25px;
 	}
 }
