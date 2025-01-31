@@ -3,7 +3,7 @@ body {
 	overflow-x: hidden;
 	background-color: #000;
 	color: #FFF;
-	font-family: 'Arial Black';
+	font-family: 'Arial';
 }
 
 .center {
@@ -81,29 +81,34 @@ body {
 	font-size: 14px;
 	margin-top: 29px;
 	color: #000;
+	font-family: 'Arial Black';
 }
 
 .openAbout {
 	clip-path: polygon(0 0, 100% 0, 100% 27%, 0 27%);
 	margin-left: 10px;
+	background: #3f3f3f;
 }
 
 .openLibrary {
 	clip-path: polygon(0 0, 100% 0, 100% 27%, 0 27%);
 	margin-top: 0px;
 	margin-left: 190px;
+	background: #3f3f3f;
 }
 
 .openDiscord {
 	clip-path: polygon(0 0, 100% 0, 100% 27%, 0 27%);
 	margin-top: 0px;
 	margin-left: -80px;
+	background: #3f3f3f;
 }
 
 .openContact {
 	clip-path: polygon(0 0, 100% 0, 100% 27%, 0 27%);
 	margin-top: 0px;
 	margin-left: 100px;
+	background: #3f3f3f;
 }
 
 .oct-text.titleText {
@@ -121,38 +126,145 @@ body {
 	transition: 0.5s;
 }
 
+#aboutPage {
+	display: none;
+	margin-top: -150px;
+}
+
+#aboutText {
+	text-align: center;
+	pointer-events: none;
+	user-select: none;
+	padding-left: 90px;
+	padding-right: 90px;
+	padding-top: 60px;
+	line-height: 1.6;
+	opacity: 0;
+}
+
+#aboutImg {
+	z-index: -10;
+	pointer-events: none;
+	user-select: none;
+	position: absolute;
+	scale: 0.75;
+	opacity: 0;
+	margin-left: 0px;
+	left: -400px;
+	top: 400px;
+}
+
+@keyframes bodyTextFWD {
+	0% {
+		opacity: 0;
+		top: -200px;
+	}
+	100% {
+		opacity: 1;
+		top: 0px;
+	}
+}
+
+@keyframes bodyImageFWD {
+	0% {
+		opacity: 0;
+		top: 450px;
+	}
+	100% {
+		opacity: 0.9;
+		top: 200px;
+	}
+}
+
+@keyframes bodyTextBACK {
+	0% {
+		opacity: 1;
+		top: 0px;
+	}
+	100% {
+		opacity: 0;
+		top: -200px;
+	}
+}
+
+@keyframes bodyImageBACK {
+	0% {
+		opacity: 0.9;
+		top: 200px;
+	}
+	100% {
+		opacity: 0;
+		top: 450px;
+	}
+}
+
+.aboutDivText {
+	animation-name: bodyTextFWD;
+	animation-duration: 1.5s;
+	animation-delay: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both;
+	animation-direction: forwards;
+}
+
+.aboutDivImage {
+	animation-name: bodyImageFWD;
+	animation-duration: 1.5s;
+	animation-delay: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both;
+	animation-direction: forwards;
+}
+
+.reverseAboutText {
+	animation-name: bodyTextBACK;
+	animation-duration: 1.5s;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both;
+	animation-direction: forwards;
+}
+  
+.reverseAboutImage {
+	animation-name: bodyImageBACK;
+	animation-duration: 1.5s;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both;
+	animation-direction: forwards;
+}
+
 @media (max-width: 4000px) {
 	.main-image, .center {
 		width: 950px;
-		color: #ff3d3d;
 	}
 }
 
 @media (max-width: 1200px) {
 	.main-image, .center {
 		width: 950px;
-		color: #f0bc2f;
 	}
 }
 
 @media (max-width: 1000px) {
 	.main-image, .center {
 		width: 800px;
-		color: #4be43d;
 	}
 }
 
 @media (max-width: 800px) {
 	.main-image, .center {
 		width: 650px;
-		color: #51cfe6;
 	}
 }
 
 @media (max-width: 600px) {
 	.main-image, .center {
 		width: 450px;
-		color: #864ae7;
 	}
 
 	.octagon {
@@ -163,7 +275,6 @@ body {
 @media (max-width: 400px) {
 	.main-image, .center {
 		width: 370px;
-		color: #f747d0;
 	}
 
 	.octagon {
