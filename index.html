@@ -13,19 +13,18 @@
 <body onresize="showSize()">
 	<div class="center">
 		<img id="headerImage" class="main-image" src="./img/RR_Header_Graphic.png" />
-		<!--<p id="debug">debug text</p>-->
 
 		<div id="menu" class="menu-container">
-			<div id="about" class="octagon oct-one" onclick="showAbout()">
+			<div id="about" class="octagon oct-one" onclick="showPage('about')">
 				<p class="oct-text">ABOUT</p>
 			</div>
-			<div id="library" class="octagon oct-two" onclick="slide()">
+			<div id="library" class="octagon oct-two" onclick="showPage('library')">
 				<p class="oct-text">LIBRARY</p>
 			</div>
-			<div id="discord" class="octagon oct-three" onclick="slide()">
+			<div id="discord" class="octagon oct-three" onclick="showPage('discord')">
 				<p class="oct-text">DISCORD</p>
 			</div>
-			<div id="contact" class="octagon oct-four" onclick="slide()">
+			<div id="contact" class="octagon oct-four" onclick="showPage('contact')">
 				<p class="oct-text">CONTACT</p>
 			</div>
 		</div>
